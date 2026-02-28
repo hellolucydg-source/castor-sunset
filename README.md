@@ -1,1 +1,41 @@
-# castor-sunset
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Castor Sunset — 07.03.26 — Chapter 01</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; padding:24px; line-height:1.35; max-width:520px; margin:0 auto;}
+    h1{font-size:22px; margin:0 0 10px;}
+    p{margin:0 0 12px;}
+    .btn{display:inline-block; padding:14px 18px; border-radius:14px; background:#111; color:#fff; text-decoration:none; font-weight:600;}
+    .hint{opacity:.75; font-size:14px; margin-top:14px;}
+    code{background:#f3f3f3; padding:2px 6px; border-radius:8px;}
+  </style>
+</head>
+<body>
+  <h1>Castor Sunset — 07.03.26 — Chapter 01</h1>
+  <p><b>Cómo:</b> abrí Stories → selfie → Sticker → GIF → buscá <code>castorsunset</code> → subí.</p>
+
+  <p><a class="btn" id="open" href="#">Abrir cámara de Instagram</a></p>
+
+  <p class="hint">
+    Si no abre la cámara: abrí Instagram y deslizá a la derecha (Stories).
+  </p>
+
+  <script>
+    const deepLink = "instagram://story-camera";
+    const fallback = "https://www.instagram.com/create/story";
+
+    document.getElementById("open").addEventListener("click", (e) => {
+      e.preventDefault();
+      const start = Date.now();
+      window.location.href = deepLink;
+
+      setTimeout(() => {
+        if (Date.now() - start < 1600) window.location.href = fallback;
+      }, 1200);
+    });
+  </script>
+</body>
+</html># castor-sunset
